@@ -3,15 +3,15 @@ Code used for analysis of data in Krasnow, Ford, Valdivia, Wilson &amp; Attwell 
 
 Run Code_transient_and_parameters.m (in MATLAB files folder) to plot calcium imaging data from GECIquant results for ROIs in sheaths, processes and somata.
 
-Code requires the following functions:
+This code requires the following functions:
 
-Intersections
+(1) Intersections (MatLab, included in this repository)
 Version: 1.12, 27 January 2010
 Author:  Douglas M. Schwarz
 
-function [ycorr,yfit] = bf(y,varargin)
+(2) function [ycorr,yfit] = bf(y,varargin)  (also in this repository)
 
-Functions by Anna Krasnow
+MatLab Functions by Anna Krasnow  (also in this repository)
 
 read_txt.m
 
@@ -19,18 +19,20 @@ read_num.m
 
 remove_spikes.m
 
-Place xls files to be processed in the 'results files' folder.
+What you should do:
 
-Example file: GC1 Results, tab one with data from GeciQuant, tab two with false positives identified for removal. 
+Place your data (xls) files to be processed in the 'results files' folder.
+
+An example file is provided: GC1 Results, tab one with data from GeciQuant, tab two with false positives identified for removal. 
 
 Use the same format for your files or update accordingly in the code.
 
-Folder test_test contains results for when you run the code on the example file.
+The folder test_test (with the format FolderName_Date) contains results for when you run the code on the example file.
 
-Adjust parameters in section '%% define variables'as required for your calcium traces.
+Adjust the parameters in the section '%% define variables'as required for your calcium(t) traces.
 
-Change date and folder names:
+Change the date and folder names:
 
 32/ date = '_test'; % change this date to match the analysed experiment
 
-53/ mainFOLDER = strcat('Test', date);
+53/ mainFOLDER = strcat('Test', date); % change this folder to a name for the analysed experiment
